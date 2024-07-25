@@ -354,6 +354,10 @@ h6 {
   .powerContent {
     padding-left: 2rem !important;
   }
+  .powerSection{
+    width: 80%;
+    font-size: 1rem;
+  }
 }
 
 .solarKitsSection {
@@ -565,7 +569,7 @@ h6 {
   }
   .energyRight_number {
     width: 80%;
-    padding: 2rem !important;
+    /* padding: 2rem !important; */
   }
 }
 
@@ -606,7 +610,7 @@ h6 {
 
 @media only screen and (max-width: 992px) {
   .value {
-    width: 45%;
+    width: 90%;
     font-size: 1rem;
   }
 }
@@ -714,11 +718,11 @@ h6 {
 
 @media only screen and (max-width: 992px) {
   .leftOpinion{
-    width: 45%;
+    width: 90%;
     padding-left: 1.5rem;
   }
   .rightOpinion{
-    width: 45%;
+    width: 90%;
    
   }
   .opinions {
@@ -865,7 +869,7 @@ h6 {
 @media only screen and (max-width: 992px) {
   .footer_left{
     width: 100%;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
   }
   .footer_right{
     width: 100%;
@@ -874,7 +878,7 @@ h6 {
   }
   .leftCopy{
     width: 100%;
-    padding-left: 0rem !important;
+    /* padding-left: 0rem !important; */
   }
   .rightCopy{
     width: 100%;
