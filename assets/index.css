@@ -1,0 +1,968 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* font-family: 'Inter', sans-serif; */
+}
+/* .inter-font {
+  font-family: 'Inter', sans-serif;
+} */
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #0b9586;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: auto;
+  font-size: 0.9rem;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  list-style: none;
+  color: #ffffff;
+  width: 50%;
+  justify-content: space-evenly;
+}
+.navImg {
+  background-color: #248077ad;
+  z-index: 100;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+
+.calling {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #ffffff;
+  align-content: flex-end;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.calling p,
+h6 {
+  margin: 0;
+}
+.calling p {
+  padding-left: 1.5rem;
+}
+.lightLi {
+  background-color: #248077ad;
+  z-index: 100;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.1rem 0;
+  border-bottom: 1px solid black;
+  border-radius: 5px;
+  width: 100px;
+}
+.menue {
+  color: white;
+  font-size: 1.5rem;
+  display: none;
+  padding-left: 3rem;
+}
+@media only screen and (max-width: 992px) {
+  .menue {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+  .calling {
+    display: none;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: #0b9586;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin: auto;
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+  .navImg {
+    padding-left: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .counter {
+    margin-left: 0 !important;
+  }
+  .solarDiv {
+    margin-left: 0 !important;
+  }
+  .mainSection {
+    overflow-y: hidden !important;
+  }
+}
+.mainSection {
+  background-image: url("images/solar-panels-meadow 1.png");
+  height: auto;
+  background-position: 50%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+.counter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 1rem;
+  margin-left: 5rem;
+  width: 90%;
+}
+.grey {
+  height: 2px;
+  background-color: gray;
+  width: 200px;
+}
+.white {
+  height: 2px;
+  background-color: white;
+  width: 40%;
+}
+.counter p {
+  color: white;
+}
+.solarDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 5rem;
+  margin-top: 3rem;
+  color: white;
+  gap: 20px;
+  width: 90%;
+}
+.solarDiv h1 {
+  width: 100%;
+}
+.solarDiv p {
+  width: 100%;
+}
+
+.solarDivButtons {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.callbutton {
+  border: 0;
+  background-color: #3cab90;
+  color: white;
+  padding: 0.7rem 1.1rem;
+  border-radius: 20px;
+}
+.requestbutton {
+  border: 0;
+  background-color: #ffbb1c;
+  color: black;
+  padding: 0.7rem 1.1rem;
+  border-radius: 20px;
+}
+.friendList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: white;
+  margin-top: 3rem;
+  align-content: center;
+  width: 100%;
+}
+.List {
+  width: 100%;
+}
+.friendListLeft {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  width: 45%;
+}
+.friendListLeft p {
+  color: #475467;
+  font-size: 1rem;
+}
+.List_number {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 100%;
+}
+.List_number span {
+  color: #84bd3a;
+}
+.friendListRight {
+  width: 40%;
+}
+.friendListImage {
+  background-image: url("images/Rectangle 30.png");
+  height: 450px;
+  width: 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 10rem;
+  position: relative;
+}
+.insideYellow {
+  height: 150px;
+  width: 60%;
+  background-color: #ffbb1c;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 4rem;
+  left: -3rem;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.contentYellow {
+  width: 100%;
+}
+.insideYellow img {
+  width: 50px;
+  height: 50px;
+}
+.insideYellow p {
+  color: #2a3334;
+  font-size: 0.8rem;
+}
+@media only screen and (max-width: 992px) {
+  .friendListLeft {
+    width: 90%;
+  }
+  .friendListRight {
+    width: 90%;
+  }
+  .friendListImage {
+    margin-left: 3rem !important;
+    margin-top: 2rem !important;
+    height: 450px;
+    width: 65%;
+  }
+}
+
+.powerSection {
+  margin-top: 3rem;
+  background-image: url("images/8116 1.png");
+  height: 400px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.powerContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: white;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 7rem;
+  gap: 20px;
+  width: 100%;
+}
+.powerContent h2 {
+  width: 100%;
+}
+.powerContent p {
+  width: 100%;
+}
+@media only screen and (max-width: 992px) {
+  .powerContent {
+    padding-left: 2rem !important;
+  }
+}
+
+.solarKitsSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 3rem;
+}
+.solarKitsContent {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.solarKitsContent h1 {
+  width: 100%;
+}
+.solarKitsContent p {
+  color: #475467;
+  width: 100%;
+}
+
+.solars {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  gap: 30px;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.solar {
+  width: 25%;
+  height: 80vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.solar img {
+  width: 100%;
+}
+.solar h3 {
+  padding: 0 0;
+  width: 100%;
+}
+.solar p {
+  width: 100%;
+}
+.solar p {
+  color: #475467;
+}
+.solar img {
+  height: 250px;
+}
+.viewProducts {
+  display: flex;
+  gap: 5px;
+  color: #3cab90;
+  width: 100%;
+
+  width: 100%;
+}
+.viewProducts h6{
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  .solarKitsContent h1 {
+    width: 45%;
+  }
+  .solarKitsContent p {
+    width: 45%;
+  }
+  .solar {
+    width: 45%;
+  }
+  .solars {
+    padding: 1rem 2rem !important;
+  }
+}
+
+.repairsSection {
+  background-image: url(images/repairs.png);
+  min-height: 70vh;
+  background-position: 50%;
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.repairsContent {
+  background-color: #000000e8;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 15px;
+  width: 45%;
+}
+.repairsContent h2 {
+  width: 100%;
+}
+.repairsContent p {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .repairsContent {
+    font-size: 0.8rem;
+    width: 70%;
+  }
+}
+
+.energy {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+  height: auto;
+  padding-left: 5rem;
+  margin-top: 3rem;
+  align-content: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+.energyLeft {
+  height: auto;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 300px;
+}
+.energyLeft img {
+  width: 50px;
+}
+.energyRight {
+  height: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.energyLeft h2 {
+  color: #101828;
+}
+.energyLeft p {
+  color: #475467;
+  margin: 0;
+  padding: 0;
+}
+.energyRight_number {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+  border: 1px solid #3cab90;
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 35%;
+}
+.energyRight_number img {
+  width: 100%;
+}
+.energyRight_number h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.energyRight_number p {
+  color: #475467;
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .energy {
+    padding-left: 2rem !important;
+  }
+  .energyLeft {
+    width: 90%;
+  }
+  .energyRight {
+    width: 90%;
+  }
+  .energyRight_number {
+    width: 45%;
+  }
+}
+
+.ourValues {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  width: 100%;
+}
+.values {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
+}
+.value {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border: 1px solid #3cab90;
+  border-radius: 15px;
+  padding: 1rem;
+  gap: 15px;
+  width: 25%;
+}
+.value h3 {
+  width: 100%;
+}
+.value p {
+  width: 100%;
+}
+.value p {
+  color: #101828;
+}
+
+@media only screen and (max-width: 992px) {
+  .value {
+    width: 45%;
+    font-size: 1rem;
+  }
+}
+
+
+.opinions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 7rem;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+}
+.leftOpinion {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 35%;
+}
+.leftOpinion img {
+  width: 50px;
+}
+.rightOpinion {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #3cab901c;
+  padding: 1.5rem;
+  position: relative;
+  gap: 20px;
+  width: 35%;
+  height: auto;
+
+}
+.whatTheySay {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+.whatTheySay p {
+  color: #3cab90;
+}
+.circles {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 5px;
+}
+.circle {
+  width: 5px;
+  height: 5px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+.dark {
+  background-color: #6b6b6b;
+}
+.person {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.person span {
+  font-size: 0.7rem;
+}
+.nextAndPrevious {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  gap: 10px;
+}
+.previous {
+  border: 0.8px solid #1c1c1c;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+.next {
+  border: 0.9px solid #1c1c1c;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+.previous i {
+  font-size: 0.9rem;
+}
+.next i {
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .leftOpinion{
+    width: 45%;
+    padding-left: 1.5rem;
+  }
+  .rightOpinion{
+    width: 45%;
+   
+  }
+  .opinions {
+    gap: 20px;
+  }
+  .person{
+    width: 100%;
+    padding-bottom: 2rem;
+    
+  }
+  .nextAndPrevious{
+    position: absolute;
+    bottom: 1rem;
+    right: 5rem;
+    gap: 10px;
+    font-size: 0.5rem;
+ 
+  }
+}
+
+
+.footer {
+  height: auto;
+  background-color: #283646;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  width: 100%;
+}
+.footer hr {
+  color: #71777d;
+  margin-top: 2rem;
+
+  width: 84%;
+}
+.footer_left {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: flex-start;
+  width: 40%;
+}
+.footer_left img {
+  width: 180px;
+  height: 70px;
+}
+.footer_left ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  width: 80%;
+  color: white;
+  font-size: small;
+  cursor: pointer;
+}
+.footer_right {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: 40%;
+}
+.footer_right p {
+  width: 100%;
+}
+.footer_right input {
+  background-color: transparent;
+  border: 1px solid #92989f;
+  border-radius: 20px;
+  padding: 0.5rem;
+  position: relative;
+  outline: 0;
+  width: 100%;
+}
+.input_button {
+  display: flex;
+  position: relative;
+  width: 80%;
+}
+.footer_right button {
+  background-color: #ffbb1c;
+  color: #ffffff;
+  border: 0;
+  border-radius: 20px;
+  padding: 0.6rem 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.copyRight {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+.leftCopy {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+  color: #92989f;
+  gap: 10px;
+  font-size: 0.8rem;
+  padding-left: 1.7rem;
+}
+.rightCopy {
+  width: 40%;
+  font-size: 0.8rem;
+}
+.rightCopy p {
+  width: 100%;
+  color: #92989f;
+}
+.vl {
+  height: 20px;
+  width: 1px;
+  background-color: #92989f;
+}
+
+@media only screen and (max-width: 992px) {
+  .footer_left{
+    width: 100%;
+    padding-left: 1rem;
+  }
+  .footer_right{
+    width: 100%;
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  .leftCopy{
+    width: 100%;
+    padding-left: 0rem !important;
+  }
+  .rightCopy{
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  .footer{
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+
+
+@media only screen and (min-width: 1027px) {
+  .energy {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    height: auto;
+    padding-left: 5rem;
+    margin-top: 3rem;
+    align-content: flex-start;
+    justify-content: center;
+    width: 100%;
+  }
+  .energyLeft {
+    height: auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+  }
+  .energyLeft img {
+    width: 50px;
+  }
+  .energyRight {
+    height: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .energyLeft h2 {
+    color: #101828;
+  }
+  .energyLeft p {
+    color: #475467;
+    margin: 0;
+    padding: 0;
+  }
+  .energyRight_number {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 15px;
+    border: 1px solid #3cab90;
+    font-size: 0.9rem;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 35%;
+  }
+  .energyRight_number img {
+    width: 100%;
+  }
+  .energyRight_number h3 {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .energyRight_number p {
+    color: #475467;
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 992px) {
+.repairsSection{
+  margin-top: 5rem;
+}
+.solar{
+
+  font-size: 0.8rem;
+}
+}
